@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App Project</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Section - 1 => Title of Quiz -->
+    <section class="container-fluid py-5 mb-5" style="background-color: bisque">
+      <div class="row justify-content-center">
+        <div class="col-auto display-3 text-primary">Developer Quiz</div>
+      </div>
+    </section>
+
+    <!-- Section - 2 => Result of Quiz -->
+    <section
+      class="container mb-5 d-none result-box"
+      style="background-color: bisque"
+    >
+      <div class="row justify-content-center">
+        <div class="col-auto display-6">
+          You are <span class="result-percentage">0</span>% expert developer
+        </div>
+      </div>
+    </section>
+
+    <!-- Section - 3 => List of Quiz Questions -->
+    <section class="container-fluid p-5" style="background-color: bisque">
+      <div class="row mb-4">
+        <div class="col-auto">Let's begin</div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <!-- Quiz Form -->
+          <form class="quiz-form">
+            <ol class="d-flex flex-column gap-4">
+              <!-- Question 1 -->
+              <li>
+                <p class="question-text">What is backbone of Web Pages?</p>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="question1Option"
+                    value="A"
+                    id="question-1-option-a"
+                  />
+                  <label class="form-check-label" for="question-1-option-a"
+                    >HTML</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="question1Option"
+                    value="B"
+                    id="question-1-option-b"
+                  />
+                  <label class="form-check-label" for="question-1-option-b"
+                    >CSS</label
+                  >
+                </div>
+              </li>
+              <!-- Question 2 -->
+              <li>
+                <p class="question-text">How do we print in JavaScript?</p>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="question2Option"
+                    value="A"
+                    id="question-2-option-a"
+                  />
+                  <label class="form-check-label" for="question-2-option-a"
+                    >print('value')</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="question2Option"
+                    value="B"
+                    id="question-2-option-b"
+                  />
+                  <label class="form-check-label" for="question-2-option-b"
+                    >console.log('value')</label
+                  >
+                </div>
+              </li>
+              <!-- Question 3 -->
+              <li>
+                <p class="question-text">
+                  Can we use forEach method on HTMLCollection?
+                </p>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="question3Option"
+                    value="A"
+                    id="question-3-option-a"
+                  />
+                  <label class="form-check-label" for="question-3-option-a"
+                    >Yes</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="question3Option"
+                    value="B"
+                    id="question-3-option-b"
+                  />
+                  <label class="form-check-label" for="question-3-option-b"
+                    >No</label
+                  >
+                </div>
+              </li>
+              <!-- Question 4 -->
+              <li>
+                <p class="question-text">
+                  What is developer's favorite array method?
+                </p>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="question4Option"
+                    value="A"
+                    id="question-4-option-a"
+                  />
+                  <label class="form-check-label" for="question-4-option-a"
+                    >forEach( )</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="question4Option"
+                    value="B"
+                    id="question-4-option-b"
+                  />
+                  <label class="form-check-label" for="question-4-option-b"
+                    >slice( )</label
+                  >
+                </div>
+              </li>
+              <!-- Question 5 -->
+              <li>
+                <p class="question-text">Javascript makes web pages dynamic?</p>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="question5Option"
+                    value="A"
+                    id="question-5-option-a"
+                  />
+                  <label class="form-check-label" for="question-5-option-a"
+                    >True</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="question5Option"
+                    value="B"
+                    id="question-5-option-b"
+                  />
+                  <label class="form-check-label" for="question-5-option-b"
+                    >False</label
+                  >
+                </div>
+              </li>
+            </ol>
+            <!-- Submit Button -->
+            <div class="text-center">
+              <input
+                class="btn text-white bg-primary"
+                type="submit"
+                name="submit-btn"
+                value="Submit Answers"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
